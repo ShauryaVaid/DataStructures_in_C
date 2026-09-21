@@ -8,7 +8,7 @@ The codebase is organized systematically into directories based on progressive c
 
 - **Lab1 to Lab4**: Foundational C programming concepts, array manipulations, structures, and introductory algorithms.
 - **LAB5**: Advanced structures and pointer manipulations.
-- **FINAL**: End-to-end implementations of complex structures such as Polynomial operations and Sparse Matrices.
+- **oneFileforAll_(being_updated)**: End-to-end implementations of complex structures such as Polynomial operations and Sparse Matrices.
 - **STACK**: Implementations of the Stack data structure using both Arrays and Linked Lists.
 - **Root Directory**: Contains various standalone practice scripts and utility codes focusing on Linked Lists, Sparse Matrices, and structure memory allocations.
 
