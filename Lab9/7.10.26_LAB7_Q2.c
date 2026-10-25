@@ -46,19 +46,51 @@ void create() {
 }
 
 void largest_element(node *root){
-
+    if(root==NULL){
+        printf("Empty");
+        return;
+    }
+    node *curr=root;
+    while(curr->right!=NULL){
+        curr=curr->right;
+    }
+    printf("%d",curr->data);
 }
 
 void smallest_element(node *root){
-
+    if(root==NULL){
+        printf("Empty");
+        return;
+    }
+    node *curr=root;
+    while(curr->left!=NULL){
+        curr=curr->left;
+    }
+    printf("%d",curr->data);
 }
 
-void height_of_a_node(node *root){
-
+int height_of_a_node(node *curr){
+    if(curr==NULL){
+        return 0;
+    }
+    int l=height_of_a_node(curr->left);
+    int r=height_of_a_node(curr->right);
+    if(l>r){
+        return l+1;
+    }
+    else{
+        return r+1;
+    }
 }
 
-void count_number_of_leaf_nodes(node *root){
-
+int count_number_of_leaf_nodes(node *root){
+    if(root==NULL){
+        return 0;
+    }
+    if(root->left==NULL && root->right==NULL){
+        return 1;
+    }
+    return count_number_of_leaf_nodes(root->left) + count_number_of_leaf_nodes(root->right);
 }
 
 int main(){
@@ -82,11 +114,15 @@ int main(){
                 break;
             }
             case 4:{
-                height_of_a_node(root);
+                int heights;
+                heights=height_of_a_node(root);
+                printf("Count = %d",heights);
                 break;
             }
             case 5:{
-                count_number_of_leaf_nodes(root);
+                int counts;
+                counts=count_number_of_leaf_nodes(root);
+                printf("Count = %d",counts);
                 break;
             }
         }
